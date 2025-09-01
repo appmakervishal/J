@@ -81,7 +81,7 @@
         <div class="mt-2 flex justify-center text-xl sm:text-2xl">
             <a href="https://appmakervishal.github.io/-"
                class="text-blue-500 hover:text-blue-300 transition-colors duration-200">
-                web developer Vishal
+                Appmaker Vishal
             </a>
         </div>
     </footer>
@@ -126,15 +126,15 @@
             const adPasscodeError = document.getElementById('ad-passcode-error');
 
             function showAd() {
-                const currentHour = new Date().getHours();
+                const currentMinute = new Date().getMinutes();
                 let adCode;
 
-                // Determine the correct passcode based on the hour
-                if (currentHour % 2 !== 0) {
-                    // Odd hour
+                // Determine the correct passcode based on the minute
+                if (currentMinute % 2 !== 0) {
+                    // Odd minute
                     adCode = "@vb";
                 } else {
-                    // Even hour
+                    // Even minute
                     adCode = "@agni";
                 }
 
@@ -157,11 +157,12 @@
                 });
             }
 
-            // Run the ad every 15 minutes (900000 milliseconds)
-            setInterval(showAd, 15 * 60 * 1000);
+            // Run the ad every 5 minutes (300000 milliseconds)
+            setInterval(showAd, 5 * 60 * 1000);
         });
     </script>
 
 </body>
 </html>
+```
 
